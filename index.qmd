@@ -1,0 +1,12 @@
+---
+title: "This is my Quarto Website for Quiz 2"
+---
+
+The gapminder data set includes important socioeconomic factors for 142 countries from the years 1952 to 2007 including life expectancy and gdp per capita.
+
+You can see my other pages in the links below. 
+[Life Expectancy and GDP per Capita](life_gdp.html)  
+[Life Expectancy and Population](life_population.html)  
+[Country Analysis](country.html)
+
+

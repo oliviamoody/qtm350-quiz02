@@ -1,0 +1,23 @@
+[
+  {
+    "objectID": "create-dataset.html",
+    "href": "create-dataset.html",
+    "title": "Create the Gapminder dataset",
+    "section": "",
+    "text": "# Install packages\n!pip install pandas gapminder\n\n# Import necessary libraries\nimport pandas as pd\nfrom gapminder import gapminder\n\n# Rename 'lifeExp' to 'life_expectancy' and 'gdpPercap' to 'gdp_per_capita'\ngapminder = gapminder.rename(columns={'lifeExp': 'life_expectancy',\n                                      'pop': 'population_millions', \n                                      'gdpPercap': 'gdp_per_capita'})\n\n# Convert population to millions\ngapminder['population_millions'] = gapminder['population_millions'] / 1_000_000\n\n# Create a new pandas DataFrame from the modified gapminder data\ngapminder_df = pd.DataFrame(gapminder)\n\n# Save the DataFrame as a CSV file\ngapminder_df.to_csv('gapminder.csv', index=False)\n\nRequirement already satisfied: pandas in /opt/anaconda3/lib/python3.12/site-packages (2.2.2)\nCollecting gapminder\n  Downloading gapminder-0.1-py3-none-any.whl.metadata (1.5 kB)\nRequirement already satisfied: numpy&gt;=1.26.0 in /opt/anaconda3/lib/python3.12/site-packages (from pandas) (1.26.4)\nRequirement already satisfied: python-dateutil&gt;=2.8.2 in /opt/anaconda3/lib/python3.12/site-packages (from pandas) (2.9.0.post0)\nRequirement already satisfied: pytz&gt;=2020.1 in /opt/anaconda3/lib/python3.12/site-packages (from pandas) (2024.1)\nRequirement already satisfied: tzdata&gt;=2022.7 in /opt/anaconda3/lib/python3.12/site-packages (from pandas) (2023.3)\nRequirement already satisfied: six&gt;=1.5 in /opt/anaconda3/lib/python3.12/site-packages (from python-dateutil&gt;=2.8.2-&gt;pandas) (1.16.0)\nDownloading gapminder-0.1-py3-none-any.whl (32 kB)\nInstalling collected packages: gapminder\nSuccessfully installed gapminder-0.1"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "This is my Quarto Website for Quiz 2",
+    "section": "",
+    "text": "The gapminder data set includes important socioeconomic factors for 142 countries from the years 1952 to 2007 including life expectancy and gdp per capita.\nYou can see my other pages in the links below. Life Expectancy and GDP per Capita\nLife Expectancy and Population\nCountry Analysis"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  }
+]
